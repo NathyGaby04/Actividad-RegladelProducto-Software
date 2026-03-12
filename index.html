@@ -1,0 +1,94 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet"/>
+    </head>
+    <body>
+
+    <div class="bg-clouds" aria-hidden="true">
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="cloud c3"></div>
+        <div class="cloud c4"></div>
+        <div class="cloud c5"></div>
+    </div>
+    <div class="bg-stars" aria-hidden="true">
+        <span>✦</span><span>✦</span><span>✦</span>
+        <span>✦</span><span>✦</span><span>✦</span>
+        <span>✦</span><span>✦</span>
+    </div>
+
+    <main class="container">
+
+        <header class="header">
+        <div class="header-deco">
+            <img class="cinna-svg" src="assets/Cinnamoroll.svg" alt="Cinnamoroll" />
+        </div>
+        <div class="header-text">
+            <span class="badge">✦ Credenciales de Usuario ✦</span>
+            <h1>Generador de contraseñas temporales</h1>
+        </div>
+        </header>
+
+        <div class="rules">
+        <div class="rule rule--blue">
+            <span class="rule-icon">Aa</span>
+            <strong>3 Letras</strong>
+            <small>A–Z · únicas</small>
+        </div>
+        <div class="rule rule--lavender">
+            <span class="rule-icon">09</span>
+            <strong>3 Dígitos</strong>
+            <small>0–9 · únicos</small>
+        </div>
+        <div class="rule rule--pink">
+            <span class="rule-icon">*/!@</span>
+            <strong>2 Símbolos</strong>
+            <small>del set ! @ # $ %</small>
+        </div>
+        </div>
+
+        <div class="display" id="display">
+        <p class="placeholder" id="placeholder">
+            <span class="placeholder-icon">☁</span>
+            Presiona el botón para generar
+        </p>
+
+        <div class="chars-wrapper" id="charsWrapper" style="display:none">
+            <div class="char-group">
+            <span class="group-label label--blue">Letras</span>
+            <div class="chars" id="contrasenaletras"></div>
+            </div>
+            <div class="divider">·</div>
+            <div class="char-group">
+            <span class="group-label label--lavender">Dígitos</span>
+            <div class="chars" id="contrasenanumeros"></div>
+            </div>
+            <div class="divider">·</div>
+            <div class="char-group">
+            <span class="group-label label--pink">Símbolos</span>
+            <div class="chars" id="contrasenasimbolos"></div>
+            </div>
+        </div>
+
+        <div class="full-password" id="fullPassword" style="display:none">
+            <code id="contrasena"></code>
+            <button class="copy-btn" id="copyBtn" onclick="copiar()">Copiar ✦</button>
+        </div>
+        </div>
+
+        <button class="generate-btn" id="generateBtn" onclick="GenerarContrasena()">
+        ☁&nbsp; Generar Contraseña
+        </button>
+
+        <footer class="footer">hecho con ☁ · sistema de seguridad v2.0</footer>
+
+    </main>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
